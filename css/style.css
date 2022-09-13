@@ -1,0 +1,152 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+hr,
+a {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+:root {
+  --pale-blue-clr: hsl(225, 100%, 94%);
+  --bright-blue-clr: hsl(245, 75%, 52%);
+  --very-pale-blue-clr: hsl(225, 100%, 98%);
+  --desarted-blue-clr: hsl(224, 23%, 55%);
+  --dark-blue-clr: hsl(223, 47%, 23%);
+  --white-clr: hsl(255, 100%, 100%);
+  --primary-ff: "Red Hat Display", sans-serif;
+}
+
+body {
+  font-size: 16px;
+  font-family: var(--primary-ff);
+  min-height: 100vh;
+  background-image: url(../img/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: var(--pale-blue-clr);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-box {
+  width: 500px;
+  border-radius: 15px;
+  background-color: var(--white-clr);
+  padding-bottom: 40px;
+  max-width: 100%;
+}
+
+.image-wrapper img {
+  border-radius: 15px 15px 0px 0px;
+}
+
+.title {
+  color: var(--dark-blue-clr);
+  font-weight: 900;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.text {
+  color: var(--desarted-blue-clr);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.box {
+  background-color: var(--very-pale-blue-clr);
+  border-radius: 15px;
+  padding: 30px;
+}
+
+.sub-title {
+  color: var(--dark-blue-clr);
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.price {
+  color: var(--desarted-blue-clr);
+  font-weight: 500;
+}
+
+.change-btn {
+  text-decoration: underline;
+  color: var(--bright-blue-clr);
+  font-weight: 700;
+  transition: 200ms ease-in-out;
+}
+
+.change-btn:hover {
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+.primary-btn {
+  background-color: var(--bright-blue-clr);
+  border-radius: 10px;
+  padding: 16px 0px;
+  color: var(--white-clr);
+  font-weight: 700;
+  margin-bottom: 30px;
+  transition: 200ms ease-in-out;
+  box-shadow: 0px 30px 20px var(--pale-blue-clr);
+}
+
+.primary-btn:hover {
+  opacity: 0.5;
+}
+
+.secondary-btn {
+  width: fit-content;
+  color: var(--desarted-blue-clr);
+  font-weight: 700;
+  transition: 200ms ease-in-out;
+}
+
+.secondary-btn:hover {
+  color: var(--dark-blue-clr);
+}
+
+/* Media Queries */
+
+@media all and (max-width: 768px) {
+  body {
+    background-image: url(../img/pattern-background-mobile.svg);
+  }
+
+  .card-box {
+    width: 300px;
+  }
+
+  .box {
+    padding: 20px;
+  }
+}
